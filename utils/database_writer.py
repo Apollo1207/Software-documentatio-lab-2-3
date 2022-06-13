@@ -25,3 +25,5 @@ def write_from_csv_to_database(csv_filename, sections_to_search, session=None):
                                 user.save()
                             else:
                                 obj.save()
+
+

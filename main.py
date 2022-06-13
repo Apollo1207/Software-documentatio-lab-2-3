@@ -14,7 +14,7 @@ api = Api(app)
 api.add_resource(UserResource, '/user', '/user/<int:pk>')
 api.add_resource(UserListResource, '/users')
 api.add_resource(PaymentMethodResource, '/paymentMethod', '/paymentMethod/<int:pk>')
-api.add_resource(PaymentMethodListResource, '/messages')
+api.add_resource(PaymentMethodListResource, '/paymentMethods')
 
 
 @app.route("/", methods=["GET"])
@@ -26,6 +26,9 @@ def get_all_data():
 
 if __name__ == '__main__':
     init_db()
+
     # generate_csv_file('data.csv')
-    # write_from_csv_to_database('data.csv', ['User', 'PaymentMethod'], session=session)
-    app.run()
+
+# write_from_csv_to_database('data.csv', ['User', 'PaymentMethod'], session=session)
+
+app.run()

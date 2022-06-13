@@ -18,3 +18,6 @@ class UserResource(AbstractResource):
 
 class UserListResource(AbstractResourceList):
     model = User
+
+
+

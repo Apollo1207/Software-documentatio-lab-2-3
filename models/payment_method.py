@@ -12,7 +12,7 @@ class PaymentMethod(AbstractModel):
     expire_date = Column(String(50), nullable=True)
     cvv = Column(String(8), nullable=True)
     country = Column(String(50), nullable=True)
-    user_pk = Column(Integer, ForeignKey('users.pk'), nullable=False)
+    user_pk = Column(Integer, ForeignKey('users.pk'), nullable=True)
     user = relationship("User", back_populates="payment_methods")
 
     def __init__(self, payment_system, card_number, expire_date, cvv, country, *args, **kwargs):

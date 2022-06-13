@@ -12,9 +12,6 @@ class AbstractModel(Base):
             session.commit()
         except Exception as e:
             raise e
-            # import pdb
-            # pdb.set_trace()
-            # session.rollback()
 
     def save(self):
         session.add(self)
